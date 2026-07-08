@@ -40,6 +40,9 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 </script>
 <style>
   body { font-family: Inter, system-ui, sans-serif; }
+  h1, h2, h3 { letter-spacing: -0.015em; }
+  ::selection { background: #B78F52; color: #fff; }
+  .kicker::before { content: ""; display: inline-block; width: 2rem; height: 1px; background: currentColor; opacity: .55; vertical-align: middle; margin-right: .75rem; }
   .page { display: none; }
   .page.active { display: block; animation: pageIn .55s ease both; }
   @keyframes pageIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
@@ -69,7 +72,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
         <img src="https://sim-immoservice.de/wp-content/uploads/2026/01/wp-logo-sim-immobilien-300x300.jpg" alt="SIM Immobilien Service GmbH Logo" class="h-11 w-11 rounded-full object-cover ring-2 ring-sand-400/70">
         <span class="leading-tight">
           <span class="block text-white font-serif text-lg font-semibold tracking-wide">SIM Immobilien</span>
-          <span class="block text-sand-100 text-[11px] uppercase kicker">Service GmbH</span>
+          <span class="block text-sand-100 text-[11px] uppercase tracking-[.22em]">Service GmbH</span>
         </span>
       </a>
 
@@ -191,6 +194,20 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
           02602 - 952 43 95
         </a>
       </div>
+      <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl reveal">
+        <div class="border-l-2 border-sand-300/60 pl-5">
+          <p class="font-serif text-4xl text-white font-semibold">10+</p>
+          <p class="text-white/70 text-sm mt-1">Jahre Branchenerfahrung</p>
+        </div>
+        <div class="border-l-2 border-sand-300/60 pl-5">
+          <p class="font-serif text-4xl text-white font-semibold">300+</p>
+          <p class="text-white/70 text-sm mt-1">erfolgreiche Vermittlungen</p>
+        </div>
+        <div class="border-l-2 border-sand-300/60 pl-5">
+          <p class="font-serif text-4xl text-white font-semibold">Mo–Sa</p>
+          <p class="text-white/70 text-sm mt-1">für Sie geöffnet</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -210,7 +227,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
   </div>
 
   <!-- Warum SIM -->
-  <div class="bg-sand-700 text-white py-24">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="font-serif text-3xl sm:text-5xl font-semibold mb-4 reveal">Warum SIM Immobilien?</h2>
       <div class="gold-rule mb-14 reveal"></div>
@@ -326,7 +343,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
   </div>
 
   <!-- Kontakt CTA -->
-  <div class="bg-sand-700 text-white py-24">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-4 reveal">Sie haben Fragen?</p>
       <h2 class="font-serif text-3xl sm:text-5xl font-semibold mb-6 reveal">Kontakt aufnehmen</h2>
@@ -344,7 +361,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= ÜBER UNS ================= -->
 <section class="page" id="page-ueber-uns">
-  <div class="bg-sand-700 text-white py-24 lg:py-32">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Über uns - Die SIM Immobilien Service GmbH</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Ihr Immobilienberater für Montabaur | Westerwald | Altenkirchen</h1>
@@ -426,7 +443,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= HAUSVERWALTUNG ================= -->
 <section class="page" id="page-hausverwaltung">
-  <div class="bg-sand-700 text-white py-24 lg:py-32" style="background-image:linear-gradient(rgba(32,25,16,.6),rgba(32,25,16,.8)),url('https://sim-immoservice.de/wp-content/uploads/2026/01/Schloss-Montabaur-BWH_1390-1024x683.webp');background-size:cover;background-position:center;">
+  <div class="bg-sand-800 text-white py-24 lg:py-32" style="background-image:linear-gradient(rgba(32,25,16,.6),rgba(32,25,16,.8)),url('https://sim-immoservice.de/wp-content/uploads/2026/01/Schloss-Montabaur-BWH_1390-1024x683.webp');background-size:cover;background-position:center;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Hausverwalter SIM Immobilien Service GmbH</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Ihre Hausverwaltung aus Montabaur</h1>
@@ -500,7 +517,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
     </div>
   </div>
 
-  <div class="bg-sand-700 text-white py-16">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
       <p class="font-serif text-2xl sm:text-3xl leading-relaxed">SIM Immobilien Service GmbH – Ihre zuverlässige Hausverwaltung in Montabaur und im Westerwald.</p>
       <p class="text-sand-100 text-lg mt-4 kicker uppercase text-sm">Ganzheitlich. Persönlich. Verantwortungsbewusst.</p>
@@ -510,7 +527,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= MIETVERWALTUNG ================= -->
 <section class="page" id="page-mietverwaltung">
-  <div class="bg-sand-700 text-white py-24 lg:py-32">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">für Montabaur, Altenkirchen, Westerwald und Umgebung</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Kompetente Mietverwaltung</h1>
@@ -573,7 +590,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= WEG-VERWALTUNG ================= -->
 <section class="page" id="page-weg-verwaltung">
-  <div class="bg-sand-700 text-white py-24 lg:py-32">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Für Montabaur, Altenkirchen und Kreis Westerwald</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">WEG-Verwaltung für Eigentümer</h1>
@@ -625,7 +642,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= IMMOBILIEN ================= -->
 <section class="page" id="page-immobilien">
-  <div class="bg-sand-700 text-white py-24 lg:py-32">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Mieten, Vermieten, Kaufen, Verkaufen</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Immobilien in Montabaur &amp; Umgebung</h1>
@@ -703,7 +720,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
     </div>
   </div>
 
-  <div class="bg-sand-700 text-white py-16">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
       <p class="font-serif text-2xl sm:text-3xl leading-relaxed">SIM ist Ihr Makler für Montabaur, den Westerwald und Altenkirchen. Für Mieten, Vermieten, Kaufen, Verkaufen, Grundstücke und Wertermittlung – persönlich, menschlich und engagiert.</p>
       <p class="text-sand-100 text-lg mt-6">Wir freuen uns Sie kennenzulernen!</p>
@@ -713,7 +730,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= IMMOBILIENANGEBOT ================= -->
 <section class="page" id="page-immobilienangebot">
-  <div class="bg-sand-700 text-white py-24 lg:py-32">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Immobilienangebot im Kreis Westerwald und Umgebung</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Unser Immobilienangebot</h1>
@@ -746,7 +763,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= IMMOBILIENSERVICE ================= -->
 <section class="page" id="page-immobilienservice">
-  <div class="bg-sand-700 text-white py-24 lg:py-32" style="background-image:linear-gradient(rgba(32,25,16,.6),rgba(32,25,16,.8)),url('https://sim-immoservice.de/wp-content/uploads/2026/01/Schloss-Montabaur-BWH_1390-1024x683.webp');background-size:cover;background-position:center;">
+  <div class="bg-sand-800 text-white py-24 lg:py-32" style="background-image:linear-gradient(rgba(32,25,16,.6),rgba(32,25,16,.8)),url('https://sim-immoservice.de/wp-content/uploads/2026/01/Schloss-Montabaur-BWH_1390-1024x683.webp');background-size:cover;background-position:center;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Von Anfang bis Ende | Von A bis Z</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Immobilienservice von SIM aus Montabaur</h1>
@@ -798,7 +815,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= BERATUNG ================= -->
 <section class="page" id="page-beratung">
-  <div class="bg-sand-700 text-white py-24 lg:py-32">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Beratung rund um das Thema Immobilien</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Kompetente Beratung rund um Immobilien</h1>
@@ -850,7 +867,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= WERTERMITTLUNG ================= -->
 <section class="page" id="page-wertermittlung">
-  <div class="bg-sand-700 text-white py-24 lg:py-32">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Immobilienbewertung exakt vom Fachmann</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Wertermittlung nach Immobilienbewertung</h1>
@@ -903,7 +920,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= OBJEKTPFLEGE & FACILITY SERVICE ================= -->
 <section class="page" id="page-objektpflege">
-  <div class="bg-sand-700 text-white py-24 lg:py-32">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Saubere Sache mit der SIM Immobilien Service GmbH</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Objektpflege &amp; Facility Service</h1>
@@ -972,7 +989,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= KONTAKT ================= -->
 <section class="page" id="page-kontakt">
-  <div class="bg-sand-700 text-white py-24 lg:py-32" style="background-image:linear-gradient(rgba(32,25,16,.65),rgba(32,25,16,.85)),url('https://sim-immoservice.de/wp-content/uploads/2026/01/bg-img-montabaur-sw-1024x361.jpg');background-size:cover;background-position:center;">
+  <div class="bg-sand-800 text-white py-24 lg:py-32" style="background-image:linear-gradient(rgba(32,25,16,.65),rgba(32,25,16,.85)),url('https://sim-immoservice.de/wp-content/uploads/2026/01/bg-img-montabaur-sw-1024x361.jpg');background-size:cover;background-position:center;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-5">Sie haben Fragen?</p>
       <h1 class="font-serif text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">Nehmen Sie Kontakt zu uns auf</h1>
@@ -1069,7 +1086,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= IMPRESSUM ================= -->
 <section class="page" id="page-impressum">
-  <div class="bg-sand-700 text-white py-20">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="font-serif text-4xl sm:text-5xl font-semibold">Impressum</h1>
       <div class="gold-rule my-6"></div>
@@ -1146,7 +1163,7 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 
 <!-- ================= DATENSCHUTZ ================= -->
 <section class="page" id="page-datenschutz">
-  <div class="bg-sand-700 text-white py-20">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="font-serif text-4xl sm:text-5xl font-semibold">Datenschutzerklärung</h1>
       <div class="gold-rule my-6"></div>
@@ -1226,14 +1243,14 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 </main>
 
 <!-- ================= FOOTER ================= -->
-<footer class="bg-sand-700 text-white border-t border-white/10">
+<footer class="bg-sand-800 text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
     <div>
       <div class="flex items-center gap-3 mb-5">
         <img src="https://sim-immoservice.de/wp-content/uploads/2026/01/wp-logo-sim-immobilien-300x300.jpg" alt="SIM Immobilien Service GmbH Logo" class="h-12 w-12 rounded-full object-cover ring-2 ring-sand-400/70" loading="lazy">
         <span class="leading-tight">
           <span class="block font-serif text-lg font-semibold">SIM Immobilien</span>
-          <span class="block text-sand-100 text-[11px] uppercase kicker">Service GmbH</span>
+          <span class="block text-sand-100 text-[11px] uppercase tracking-[.22em]">Service GmbH</span>
         </span>
       </div>
       <p class="text-white/60 text-sm leading-relaxed">Ihr Immobilienmakler des Vertrauens – für Montabaur, Altenkirchen, den Kreis Westerwald und Umgebung.</p>
