@@ -343,8 +343,9 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
   </div>
 
   <!-- Kontakt CTA -->
-  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <div class="bg-gradient-to-br from-sand-600 via-sand-700 to-sand-800 text-white py-24 relative overflow-hidden">
+    <img src="images/logo-sim-mark.png" alt="" aria-hidden="true" loading="lazy" class="pointer-events-none select-none absolute -left-20 top-1/2 -translate-y-1/2 w-[30rem] opacity-[0.05]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
       <p class="kicker uppercase text-sand-100 text-xs sm:text-sm font-semibold mb-4 reveal">Sie haben Fragen?</p>
       <h2 class="font-serif text-3xl sm:text-5xl font-semibold mb-6 reveal">Kontakt aufnehmen</h2>
       <p class="text-white/75 text-lg mb-10 reveal">Melden Sie sich bei uns</p>
@@ -1023,6 +1024,9 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
           </dl>
           <p class="text-white/60 text-sm mt-4">Weitere Termine nach Absprache möglich.</p>
         </div>
+        <div class="reveal bg-white rounded-2xl border border-sand-200 p-6">
+          <img src="images/logo-sim.jpg" alt="SIM Immobilien Service GmbH – Ein starker Partner an Ihrer Seite" loading="lazy" class="w-full h-auto">
+        </div>
       </div>
 
       <!-- Formular -->
@@ -1236,7 +1240,8 @@ if (typeof tailwind !== 'undefined') tailwind.config = {
 </main>
 
 <!-- ================= FOOTER ================= -->
-<footer class="bg-sand-800 text-white">
+<footer class="bg-sand-800 text-white relative overflow-hidden">
+  <img src="images/logo-sim-mark.png" alt="" aria-hidden="true" loading="lazy" class="pointer-events-none select-none absolute -right-16 -bottom-12 w-[26rem] opacity-[0.06]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
     <div>
       <div class="flex items-center gap-3 mb-5">
